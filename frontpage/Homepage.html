@@ -24,7 +24,7 @@
                 <img id="logo" src="images/SBPRO.png" alt="Clicca qui per tornare all'homepage" role="button">
             </a>
         </section>
-        <section class="searchbar" role="navigation" aria-label="Barra Ricerca">
+        <section class="searchbar" role="navigation" aria-label="BarraRicerca">
             <form name="searchForm" method="get" role="form">
                 <label></label>
                 <button id="Bottonelente" type="submit" role="button">
@@ -32,8 +32,9 @@
                 </button>
                 <span class="searchbar">
                     <label>
-                        <input type="text" role="textbox" id="search" name="search" value="" maxlength="50" required placeholder="Cerca..." size="19"/>
-                        <select>
+                        <!--non l'ho messo required perché ho pensato possa funzionare pure come un cerca fra catalogo-->
+                        <input type="search" role="textbox" id="search" name="search" value="" maxlength="50"  placeholder="Cerca..." size="19"/>
+                        <select name="elemento">
                             <option value="libri" selected>Libri</option>
                             <option value="giornali">Giornali</option>
                             <option value="media">Multimedia</option>
@@ -64,19 +65,19 @@
                 <h2>SISTEMA BIBLIOTECARIO PROVINCIALE DI ROVIGO</h2>
             <nav role="navigation" aria-label="Menù Cataloghi">
                 <ul role="menu">
-                    <li class="menu_box_main">
+                    <li class="menu_box_main" role="menuitem">
                         <a class="etichette_div" href="Catalogo.html">
                             <!--MODIFICA-->
                             <img class="img_box" src="images/Catalogo.png" alt="clicca qui per esplorare il catalogo">
                         </a>
                     </li>
-                    <li class="menu_box_main">
+                    <li class="menu_box_main" role="menuitem">
                         <a class="etichette_div" href="CatalogoEventi.html">
                             <!--MODIFICA-->
                             <img class="img_box" src="images/CatalogoEventi.png" alt="clicca qui per esplorare catalogo eventi">
                         </a>
                     </li>
-                    <li id="CatalogoBiblioteche" class="menu_box_main">
+                    <li id="CatalogoBiblioteche" class="menu_box_main" role="menuitem">
                         <a class="etichette_div" href="CatalogoBiblioteche.html">
                             <!--MODIFICA-->
                             <img class="img_box" src="images/CatalogoBiblioteche.png" alt="clicca qui per esplora catalogo biblioteche">
@@ -195,7 +196,7 @@
         </section>
 
         <!--Link a inizio pagina-->
-        <div id="torna_su">
+        <div class="torna_su">
             <a href="#header"><img id="freccia" role="button" src="images/freccia.png" alt="Clicca qui per tornare in cima alla pagina"></a>
         </div>
     </main>

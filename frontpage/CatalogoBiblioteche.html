@@ -7,7 +7,7 @@
     <meta
             charset="UTF-8"
             name="description"
-            content="Homepage del sito contiene informazioni sui libri consigliati, nuove uscite ed eventi in evidenza">
+            content="Catalogo delle biblioteche del sistema">
 </head>
 
 <body>
@@ -32,8 +32,8 @@
             </button>
             <span class="searchbar">
                     <label>
-                        <input type="text" role="textbox" id="search" name="search" value="" maxlength="50" required placeholder="Cerca..." size="19"/>
-                        <select>
+                        <input type="text" role="textbox" id="search" name="search" value="" maxlength="50" placeholder="Cerca..." size="19"/>
+                        <select name="elemento">
                             <option value="libri" selected>Libri</option>
                             <option value="giornali">Giornali</option>
                             <option value="media">Multimedia</option>
@@ -62,15 +62,15 @@
     <section id="box_main">
         <div class="contenitore_box_main">
             <h2>CERCA FRA LE BIBLIOTECHE DEL SISTEMA</h2>
-            <form name="searchForm" method="get" role="form">
+            <form class="form_box_main" name="searchForm" method="get" role="form">
                 <label class="label_box_main">Nome della biblioteca
-                    <br>
-                    <input id="from_biblioteca" class="form_box_main" type="search" role="textbox" name="nome_biblioteca" value="" maxlength="50" required placeholder="Es. Biblioteca Comuna di..." size="50"/>
-                    <br>
-                    <button class="cerca_box_main" type="submit" role="button">
-                        CERCA
-                    </button>
+                    <span class="form_box_main">
+                        <input class="form_box_main" type="search" role="textbox" name="nome_biblioteca" value="" maxlength="50" required placeholder="Es. Biblioteca Comuna di..." size="50"/>
+                    </span>
                 </label>
+                <button class="cerca_box_main" type="submit" role="button">
+                    CERCA
+                </button>
             </form>
         </div>
     </section>
