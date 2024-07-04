@@ -195,7 +195,6 @@ section h2
     padding: 0 0 0.4em 0;
 }
 
-/*questa formattazione serve a far andare il tasto cerca visto che di default form ha display:flex;*/
 form.form_box_main
 {
     display: block;
@@ -205,7 +204,6 @@ span.form_box_main
 {
     display: flex;
 }
-/*/*/
 
 label.label_box_main
 {
@@ -215,11 +213,20 @@ label.label_box_main
 
 input.form_box_main
 {
-    margin-top: 0.4em;
+    float: left;
+    margin: 0.4em 4.1em 1.3em 0;
     padding: 12px 70px 10px 12px;
     border: 1px solid #000000;
     border-radius: 10px;
-    margin-bottom: 1.3em;
+}
+
+select.form_box_main
+{
+    float: right;
+    margin: 0.4em 4.1em 0 0;
+    padding: 12px 150px 10px 12px;
+    border: 1px solid #000000;
+    border-radius: 10px;
 }
 
 button.cerca_box_main
@@ -239,26 +246,31 @@ button.cerca_box_main:active
     color: #D9D9D9;
 }
 
-/*formattazione della lista di biblioteche*/
+/*formattazione box_eventi*/
 section.elementi_in_evidenza div
 {
-    float: left;
-    width: 22em;
-    height: 9.5em;
+    width: 69em;
+    height: 16.5em;
     background-color: #D9D9D9;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    margin-bottom: 1.7em;
-    padding: 1em;
-    box-sizing: border-box; /*per render il bordo parte dell'div*/
+    padding: 1.5em 3em 0 1.5em;
+    box-sizing: border-box;
     border: 3px solid #8711E3;
     border-radius: 5px;
-    text-align: center;
+    margin-bottom: 1.7em;
+    position: relative; /*serve per far si che il cuore posizionato con absolute sia posizionato secondo questo div*/
 }
 
 section.elementi_in_evidenza div:hover
 {
     box-shadow: -2px 5px  7px #7a7979, 2px 0  7px #7a7979;
+}
+
+img.immagine_in_evidenza
+{
+    float: left;
+    width: 9.5em;
+    height: 13.5em;
+    margin-right: 2em
 }
 
 p.titolo
@@ -267,15 +279,37 @@ p.titolo
     font-size:1.1em;
     font-weight: 800;
     color: #8711E3;
-    padding: 0 0 0.45em 0;
+    margin-top: -0.1em;
 }
 
-p.dati
+section.elementi_in_evidenza p
 {
     font-size: 0.9em;
+    max-height: 7.6em;
+    padding: 0 0 0.8em 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 22em;
+}
+
+.sottotitolo
+{
+    font-weight: 800;
+    font-size: 1em;
+}
+
+button.segui /*MODIFICA absolute */
+{
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    border: none;
+    background-color: transparent;
+}
+
+img.cuore
+{
+    width:1.5em;
+    height: 1.5em;
 }
 
 /*fomattazione del bottone per tornare all'inzio della pagina*/
