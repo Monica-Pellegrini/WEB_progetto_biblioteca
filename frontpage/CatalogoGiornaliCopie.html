@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/CatalogoCopieStyle.css" />
+    <meta
+            charset="UTF-8"
+            name="description"
+            content="Catalogo degli elementi del sistema bibliotecario. Sono visualizzabili Libri, giornali e multimedia">
+</head>
+
+<body>
+<!--skip per l'accessibilità-->
+<article id="hiddenKeys">
+    <a accesskey="c" href="#main">vai al contenuto della pagina</a>
+    <a accesskey="m" href="#lista_copie">vai alla lista delle copie</a>
+    <a accesskey="p" href="#primo_link_footer">vai al pié di pagina</a>
+</article>
+
+<!--Inizio Header-->
+<header id="header">
+    <section>
+        <a href="Homepage.html" aria-label="Home">
+            <img id="logo" src="images/SBPRO.png" alt="Clicca qui per tornare all'homepage" role="button">
+        </a>
+    </section>
+    <section class="searchbar" role="navigation" aria-label="BarraRicerca">
+        <form name="searchForm" method="get" role="form">
+            <label></label>
+            <button id="Bottonelente" type="submit" role="button">
+                <img id="submit" src="images/lente.png" alt="Clicca qui per per cercare" role="button">
+            </button>
+            <span class="searchbar">
+                    <label>
+                        <input type="search" role="textbox" id="search" name="search" value="" maxlength="50" placeholder="Cerca..." size="19"/>
+                        <select name="elemento">
+                            <option value="libri" selected>Libri</option>
+                            <option value="giornali">Giornali</option>
+                            <option value="media">Multimedia</option>
+                        </select>
+                    </label>
+                </span>
+        </form>
+    </section>
+    <nav role="navigation" aria-label="Menù User">
+        <ul role="menu">
+            <li role="menuitem">
+                <ul class="filtri" role="menu">
+                    <li role="menuitem"><a class="BottoneHeader" href="RicercaAvanzata.html">Ricerca Avanzata</a></li>
+                </ul>
+                <ul class="itemlist" role="menu">
+                    <li role="menuitem" id="iscriviti"><a class="BottoneHeader" href="iscriviti.html">Iscriviti</a></li>
+                    <li role="menuitem"><a id="BottoneAccedi"  class="BottoneHeader" href="accedi.html">Accedi</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+    <section class="clearfix">
+        <a href="CatalogoLibriCopie.html"><img class="immagine_in_evidenza" src="https://edicola.shop/media/catalog/product/cache/1/thumbnail/400x/17f82f742ffe127f42dca9de82fb58b1/1/0/10700c12ca.jpg" alt="copertina del giornale"></a>
+        <p class="titolo">Elle Italia 18 / Hearts Magazines Italia</a></p>
+        <p class="descrizione_elemento"><span class="sottotitolo">ISSN: </span>9772-0396</p>
+        <p class="descrizione_elemento"><span class="sottotitolo">Data prima pubblicazione: </span>2024-05-09</p>
+        <p class="descrizione_elemento"><span class="sottotitolo">Genere: </span>moda</p>
+        <p class="descrizione_elemento"><span class="sottotitolo">Sinossi: </span>
+            Nuovo numero della rivista di moda francese fondata da Pierre Lazaref.
+        </p>
+    </section>
+    <section class="elementi_in_evidenza">
+        <div><h3>Copie</h3></div>
+        <p id="lista_copie" class="messaggio">Sono presenti <strong>4</strong> copie, di cui <strong>2</strong> ammesse al prestito</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Biblioteca</th><th>Stato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td title="Biblioteca">Guarda Veneta</td> <!--MODIFICA: VOGLIAMO FARE LA PAGINA DELLA BIBLIOTECA? ALLORA QUESTO LINK-->
+                    <td title="Stato">Ammesso al prestito</td>
+                </tr>
+                <tr>
+                    <td title="Biblioteca">Badia Polesine</td>
+                    <td title="Stato">Ammesso al prestito</td>
+                </tr>
+                <tr>
+                    <td title="Biblioteca">Trecenta</td>
+                    <td title="Stato">In transito</td>
+                </tr>
+                <tr>
+                    <td title="Biblioteca">Rosolina Mare</td>
+                    <td title="Stato">Solo Consultazione</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!--Link a inizio pagina-->
+    <div class="torna_su">
+        <a href="#header"><img id="freccia" role="button" src="images/freccia.png" alt="Clicca qui per tornare in cima alla pagina"></a>
+    </div>
+</main>
+
+<!--footer-->
+<footer>
+    <!--Prima colonna-->
+    <nav class="footer-nav" role="navigation" aria-label="link footer">
+        <ul class="prima_colonna" role="menu">
+            <li id="primo_link_footer" role="menuitem"><a href="home.html">Home Page</a></li>
+            <li role="menuitem"><a href="faq.html">FAQs</a></li>
+            <li role="menuitem"><a href="sponsor.html">Sponsorizzazioni</a></li>
+        </ul>
+        <!--Seconda colonna-->
+        <ul class="seconda_colonna" role="menu">
+            <li role="menuitem"><a href="user_sup.html">Supporto utente</a></li>
+            <li role="menuitem"><a href="tec_sup.html">Supporto tecnico</a></li>
+            <li role="menuitem"><a href="segnala.html">Segnala questo evento</a></li>
+        </ul>
+        <!--Terza colonna-->
+        <ul class="terza_colonna" role="menu">
+            <li role="menuitem"><a href="privacy.html">Privacy</a></li>
+            <li role="menuitem"> <a href="cookies.html">Cookies</a></li>
+            <li role="menuitem"><a href="terms.html">Termini di utilizzo</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
