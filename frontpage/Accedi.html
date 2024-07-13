@@ -3,11 +3,11 @@
 
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/CatalogoBibliotecheStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/AccediStyle.css" />
     <meta
             charset="UTF-8"
             name="description"
-            content="Catalogo delle biblioteche del sistema">
+            content="Homepage del sito contiene informazioni sui libri consigliati, nuove uscite ed eventi in evidenza">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <img id="logo" src="images/SBPRO.png" alt="Clicca qui per tornare all'homepage" role="button">
         </a>
     </section>
-    <section class="searchbar" role="navigation" aria-label="Barra Ricerca">
+    <section class="searchbar" role="navigation" aria-label="BarraRicerca">
         <form name="searchForm" method="get" role="form">
             <label></label>
             <button id="Bottonelente" type="submit" role="button">
@@ -32,7 +32,8 @@
             </button>
             <span class="searchbar">
                     <label>
-                        <input type="text" role="textbox" id="search" name="search" value="" maxlength="50" placeholder="Cerca..." size="19"/>
+                        <!--non l'ho messo required perché ho pensato possa funzionare pure come un cerca fra catalogo-->
+                        <input type="search" role="textbox" id="search" name="search" value="" maxlength="50"  placeholder="Cerca..." size="19"/>
                         <select name="elemento">
                             <option value="libri" selected>Libri</option>
                             <option value="giornali">Giornali</option>
@@ -59,66 +60,32 @@
 
 <!--Main-->
 <main id="main" class="clearfix" role="main">
+    <!--form login-->
     <section id="box_main">
         <div class="contenitore_box_main">
-            <h2>CERCA FRA LE BIBLIOTECHE DEL SISTEMA</h2>
+            <h2>ENTRA NELLA TUA AREA SERVIZI UTENTE ONLINE</h2>
+            <p class="indicazione">
+                Inserisci le credenziali che hai ricevuto al momento della registrazione o che hai inserito durante la registrazione online
+            </p>
             <form class="form_box_main" name="searchForm" method="get" role="form">
-                <label class="label_box_main">Nome della biblioteca
-                    <span class="form_box_main">
-                        <input class="form_box_main" type="search" role="textbox" name="nome_biblioteca" value="" maxlength="50" required placeholder="Es. Biblioteca Comuna di..." size="50"/>
-                    </span>
+                <span class="form_box_main">
+                    <label class="label_box_main">Email
+                    <br>
+                    <input class="form_box_main" type="email" role="textbox" name="email" value="" maxlength="50" size="28" required/>
                 </label>
+                <label class="label_box_main">Password
+                    <br>
+                    <input class="form_box_main" type="password" role="textbox" name="password" value="" maxlength="50" size="28" required/>
+                </label>
+                </span>
                 <button class="cerca_box_main" type="submit" role="button">
-                    CERCA
+                    ACCEDI
                 </button>
             </form>
+            <br>
         </div>
     </section>
 
-    <section class="elementi_in_evidenza">
-        <div>
-            <p class="titolo">Biblioteca di Badia Polesine</p>
-            <p class="dati">Abbazia della Vangadizza, via Cigno, 109 - 45021 Badia Polesine (RO)</p>
-            <p class="dati"> biblioteca@comune.badiapolesine.ro.it</p>
-            <p>3346642494</p>
-        </div>
-        <div>
-            <p class="titolo">Biblioteca dell’Accademia dei Concordi</p>
-            <p class="dati">piazza Vittorio Emanuele II, 14 - 45100 Rovigo (RO)</p>
-            <p class="dati">reference@concordi.it</p>
-            <p class="dati">042527991</p>
-        </div>
-        <div>
-            <p class="titolo">Biblioteca Comunale di Guarda Veneta</p>
-            <p  class="dati">Via Sandro Pertini, 57, 45030, Guarda Veneta, RO</p>
-            <p  class="dati">biblioteca@comune.guardaveneta.ro.it</p>
-            <p  class="dati">0425487090</p>
-        </div>
-        <div>
-            <p class="titolo">Biblioteca di Badia Polesine</p>
-            <p class="dati">Abbazia della Vangadizza, via Cigno, 109 - 45021 Badia Polesine (RO)</p>
-            <p class="dati"> biblioteca@comune.badiapolesine.ro.it</p>
-            <p>3346642494</p>
-        </div>
-        <div>
-            <p class="titolo">Biblioteca dell’Accademia dei Concordi</p>
-            <p class="dati">piazza Vittorio Emanuele II, 14 - 45100 Rovigo (RO)</p>
-            <p class="dati">reference@concordi.it</p>
-            <p class="dati">042527991</p>
-        </div>
-        <div>
-            <p class="titolo">Biblioteca Comunale di Guarda Veneta</p>
-            <p  class="dati">Via Sandro Pertini, 57, 45030, Guarda Veneta, RO</p>
-            <p  class="dati">biblioteca@comune.guardaveneta.ro.itasda</p>
-            <p  class="dati">0425487090</p>
-        </div>
-        <div>
-            <p class="titolo">Biblioteca Comunale di Stienta</p>
-            <p class="dati">Via Maffei, 195, 45039, Stienta, RO</p>
-            <p class="dati">biblioteca@comune.stienta.ro.it</p>
-            <p class="dati">0425746378</p>
-        </div>
-    </section>
     <!--Link a inizio pagina-->
     <div class="torna_su">
         <a href="#header"><img id="freccia" role="button" src="images/freccia.png" alt="Clicca qui per tornare in cima alla pagina"></a>

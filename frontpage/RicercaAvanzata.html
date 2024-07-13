@@ -50,8 +50,8 @@
                     <li role="menuitem"><a class="BottoneHeader" href="RicercaAvanzata.html">Ricerca Avanzata</a></li>
                 </ul>
                 <ul class="itemlist" role="menu">
-                    <li role="menuitem" id="iscriviti"><a class="BottoneHeader" href="iscriviti.html">Iscriviti</a></li>
-                    <li role="menuitem"><a id="BottoneAccedi"  class="BottoneHeader" href="accedi.html">Accedi</a></li>
+                    <li role="menuitem" id="iscriviti"><a class="BottoneHeader" href="Iscriviti.html">Iscriviti</a></li>
+                    <li role="menuitem"><a id="BottoneAccedi"  class="BottoneHeader" href="Accedi.html">Accedi</a></li>
                 </ul>
             </li>
         </ul>
@@ -67,10 +67,11 @@
             <h2>RICERCA AVANZATA</h2>
             <form class="form_box_main" name="searchForm" method="get" role="form">
                 <span class="form_box_main">
-		    <label class="label_box_main">
+		            <label class="label_box_main">
                         Tipologia
-                        <select class="form_box_main_elemento" name="elemento">
-                            <option value="libri" selected>Libri</option>
+                        <select class="form_box_main_elemento" name="elemento" required>
+                            <option value=""> </option>
+                            <option value="libri">Libri</option>
                             <option value="giornali">Giornali</option>
                             <option value="media">Multimedia</option>
                     </select>
@@ -117,16 +118,17 @@
                 <span class="form_box_main">
                     <label class="label_box_main">Anno prima pubblicazione
                         <br>
-                        <input class="form_box_main" type="number" role="textbox" name="anno_prima_publ" value="" maxlength="50" size="28"/>
+                        <input class="form_box_main" type="number" role="textbox" name="anno_prima_publ" value="" maxlength="50" size="25"/>
                     </label>
                     <label class="label_box_main">Numero
                         <br>
-                        <input class="form_box_main" type="number" role="textbox" name="numero" value="" maxlength="50" size="28"/>
+                        <input class="form_box_main" type="number" role="textbox" name="numero" value="" maxlength="50" size="26"/>
                     </label>
                     <label class="label_box_main">Tipologia
                     <br>
                     <select class="form_box_main" name="tipo">
-                        <option value="dvd" selected>DVD</option>
+                        <option value=""> </option>
+                        <option value="dvd">DVD</option>
                         <option value="cd">CD</option>
                     </select>
                 </label>
