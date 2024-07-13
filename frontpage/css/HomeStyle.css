@@ -45,20 +45,6 @@ p.descrizione
 }
 
 
-ul, li
-{
-    list-style: none;
-}
-
-a.BottoneHeader
-{
-    font-size: 1.1em;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-weight: 600;
-    color: #ffffff;
-}
-
 /*formattazione del skiplinks per l'accessibilità*/
 #hiddenKeys
 {
@@ -84,6 +70,21 @@ header
     max-width: 8.7em;
     margin-right: 2.1em;
 }
+
+ul, li
+{
+    list-style: none;
+}
+
+a.BottoneHeader
+{
+    font-size: 1.1em;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+}
+
 
 section.searchbar
 {
