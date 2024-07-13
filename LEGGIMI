@@ -6,15 +6,16 @@ NOTE DATABASE:
 - dovremmo avere un nome per le biblioteche
 - breve riassunto per i libri, giornali e multimedia (massimo 1030 caratteri)
 
+NOTE RICERCA AVANZATA:
+Firefox decide di visualizzare gli input number in modo diverso da tutti gli altri browser quindi, a meno che non si facciano due CSS diverse per i diversi tipi di 
+browser, è impossibile far apparire i campi allineati sia su chrome che su firefox. Visto che tu usi FF e lo mostriamo dal tuo PC io li ho allineati li.
+Fare una ricerca avanzata diversa per libri/giornali/multimedia non aveva molto senso perché abbiamo pochi campi quindi ho scelto di mettere tutto assieme
+i vari campi della form andrrebbero poi attivati o meno con javascript a seconda di che elemento è selezionato
+
 
 NOTE HOME PAGE:
 Esplora catalogo ed esplora eventi fanno visualizzare tutti i (libri/giornali/multimedia) ed eventi
 Dopo aver fatto l'accesso al posto di accedi registri compare il tuo profilo e schiacciandoci hai accesso all'"area personale"
-
-NOTE SU CERCA LIBRO:
-ATTENZIONE: LA ROBA DELLA RICERCA NON HA "STATO" PER I LIBRI MA L'HO FATTO COSì GIUSTO PER AVERE UN ESEMPIO VISTO CHE RICICLO PER VARIE PAGINE LO STESSO TEMPLATE
-Nonostante avessimo detto di tenerla minimal ho optato per mettere l'immagine di copertina perché sennò mi sembrava troppo spoglio
-Poi sulla copia specifica c'è più roba quindi nessun problema
 
 
 NOTE "AREA PERSONALE":
