@@ -14,13 +14,6 @@ body
 }
 
 /*fromattazione di font e vari*/
-h2
-{
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.8em;
-    font-weight: 600;
-    color: #FFFFFF;
-}
 
 /*formattazione del skiplinks per l'accessibilità*/
 #hiddenKeys
@@ -114,7 +107,7 @@ form
 .searchbar select
 {
     padding: 0.59em 48px 10px 89px;
-    margin-left: -0.3em;
+    margin-left: -0.3em; /*per far si che sia attaccato all'input*/
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -169,98 +162,56 @@ ul.filtri a:hover, ul.itemlist a:hover
 main
 {
     position: relative;
-    width: 69em;
+    width: 75em;
     margin: auto;
 }
 
-/*formattazione dei banner*/
-#box_main
+section.contenuto_in_evidenza
 {
-    width: 69em;
-    height: 18.5em;
-    background-image: linear-gradient(to bottom, #8711E3 0%, #C37ACD 100%);
-    text-align: left;
-    margin: 3.4em auto 5em;
-    border-radius: 10px;
-    box-shadow: 0 6px 7px #7a7979;
+    margin-top: 3.4em;
+    padding-right: 2.4em;
 }
 
-div.contenitore_box_main
+h2
 {
-    padding: 4.5em 0 3.5em 3.5em;
+    font-size: 1.8em;
 }
 
-section h2
-{
-    padding: 0 0 0.4em 0;
-}
-
-form.form_box_main
-{
-    display: block;
-}
-
-span.form_box_main
-{
-    display: flex;
-}
-
-label.label_box_main
-{
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-input.form_box_main
+/*formattazione aside con link alle varie funzioni*/
+aside
 {
     float: left;
-    margin: 0.4em 4.1em 0 0;
-    padding: 12px 70px 10px 12px;
-    border: 1px solid #000000;
-    border-radius: 10px;
+    border: 2px solid #8711E3;
+    background-color: #D9D9D9;
+    padding: 1em 2em;
+    margin-right: 3.4em;
 }
 
-select.form_box_main
+aside ul
 {
-    float: right;
-    margin: 0.4em 4.1em 0 0;
-    padding: 12px 150px 10px 12px;
-    border: 1px solid #000000;
-    border-radius: 10px;
+    margin-bottom: 0.5em;
 }
 
-input.checkbox_box_main
+p.aside
 {
-    /*ingrandisco un po' la dimesione della checkbox. Si può fare anche con transform: scale(1.5); ma non mi paice come
-    lo visualizza firefox*/
-    width: 1.2em;
-    height: 1.2em;
-    /**/
-    margin: 0 0.3em 0 0;
-    vertical-align: top; /*per allineare la checkbox con l'etteichetta che, essendo bold non era più allineata*/
+    font-family: 'Outfit', 'arial', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+    padding-left: 0.3em;
+    border-left: 3px solid #5C1098;
+    text-transform: uppercase;
+    color: #2f2f2f;
 }
 
-div.formattazione
-{
-    padding: 0.4em;
+a.linkAside {
+    text-decoration: none;
+    font-weight: 600;
+    color: #8711E3;
 }
 
-button.cerca_box_main
+a.linkAside:hover
 {
-    margin-top: 1.3em;
-    padding: 10px 30px;
-    background-color: #5C1098;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button.cerca_box_main:active
-{
-    background-color: #420c6c;
-    color: #D9D9D9;
+    color: #5C1098;
 }
 
 /*formattazione menù della selezione della tipologia*/
@@ -271,6 +222,7 @@ li.selezione_elemento
     padding-left: 1em;
     padding-right: 1em;
     margin-bottom: 1.7em;
+    box-sizing: border-box;
 }
 
 li.selezione_elemento:hover
@@ -289,88 +241,100 @@ li.selezione_elemento a:active
     color: #5C1098;
 }
 
-/*formattazione box_elementi*/
-section.elementi_in_evidenza div
+/*formattazione dei prestiti*/
+div.biblioteche, div.inventario, div.inventario_due
 {
-    width: 69em;
-    height: 16.5em;
+    float: right;
+    width: 24em;
+    height: 13em;
     background-color: #D9D9D9;
-    padding: 1.4em 3em 0 1.5em;
-    box-sizing: border-box;
+    margin-right: 2.7em;
+    margin-bottom: 1.7em;
+    padding: 1em;
+    box-sizing: border-box; /*per render il bordo parte dell'div*/
     border: 3px solid #8711E3;
     border-radius: 5px;
-    margin-bottom: 1.7em;
-    position: relative; /*serve per far si che il cuore posizionato con absolute sia posizionato secondo questo div*/
+    text-align: center;
+    position: relative;
 }
 
-section.elementi_in_evidenza div:hover
+div.inventario_due
+{
+    width: 25em;
+    margin-right: 1.7em;
+    height: 9em;
+}
+
+div.inventario
+{
+    width: 26.5em;
+    margin-right: 0.5em;
+}
+
+div.biblioteche:hover, div.inventario:hover, div.inventario_due:hover
 {
     box-shadow: -2px 5px  7px #7a7979, 2px 0  7px #7a7979;
 }
 
-img.immagine_in_evidenza
+div.inventario_left
 {
     float: left;
-    width: 9.5em;
-    height: 13.5em;
-    margin-right: 2em
+    text-align: left;
+    width: 15em;
 }
 
-p.titolo_evento
+div.inventario_right
 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1em;
-    font-weight: 800;
-    color: #8711E3;
-    margin-top: -0.1em;
-    margin-bottom: 0.8em;
+    float: right;
+    text-align: left;
 }
 
 p.titolo
 {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-top: 2em;
-    margin-bottom: 0.8em;
-}
-
-p.titolo a
-{
-    text-decoration: none;
+    font-size:1.1em;
+    font-weight: 800;
     color: #8711E3;
+    padding: 0 0 0.45em 0;
 }
 
-p.titolo a:hover
+p.titolo_wish
 {
-    color: #5C1098;
+    font-family: 'Outfit', sans-serif;
+    font-size:1.1em;
+    font-weight: 800;
+    color: #8711E3;
+    padding: 0 0 1em 0;
 }
 
-p.descrizione_elemento
+p.dati
 {
-    padding-bottom: 0.8em;
-}
-
-p.descrizione
-{
-    font-size: 0.9em;
-    max-height: 7.6em;
-    padding: 0 0 0.8em 0;
+    font-size: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 0.4em;
 }
 
-.sottotitolo
+p.dati_wish
 {
-    font-weight: 800;
     font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 22em;
+    margin-bottom: 0.5em;
 }
 
+span.bold
+{
+    font-weight: bold;
+}
+
+/*formattazione segui evento*/
 button.segui
 {
     position: absolute;
     bottom: 2%;
-    right: 1%;
+    right: 2%;
     border: none;
     background-color: transparent;
 }
@@ -379,62 +343,6 @@ img.cuore
 {
     width:1.5em;
     height: 1.5em;
-}
-
-/*formattazione del menu per scegliere la pagina*/
-ul.nav_pagina
-{
-    width: 100%;
-    text-align: center;
-}
-
-ul.nav_pagina li
-{
-    display: inline-block;
-    margin-right: 0.5em;
-    border: 2px solid #8711E3;
-    box-sizing: border-box;
-    padding: 0.3em 0.65em;
-    border-radius: 4px;
-}
-
-ul.nav_pagina li:hover
-{
-    box-shadow: 0 4px 7px #7a7979;
-}
-
-ul.nav_pagina li:active
-{
-    background-color: #5C1098;
-    border: 2px solid #5C1098;
-}
-
-ul.nav_pagina li.active
-{
-    background-color: #8711E3;
-}
-
-ul.nav_pagina li.salta
-{
-    padding: 0.3em 0.5em ;
-}
-
-ul.nav_pagina li a
-{
-    font-weight: 600;
-    text-decoration: none;
-    color: #000000;
-}
-
-ul.nav_pagina li.active a
-{
-    color: #FFFFFF
-}
-
-ul.nav_pagina li img
-{
-    width: 0.8em;
-    height: 0.8em;
 }
 
 /*fomattazione del bottone per tornare all'inzio della pagina*/

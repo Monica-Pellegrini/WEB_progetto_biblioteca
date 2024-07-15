@@ -162,14 +162,14 @@ ul.filtri a:hover, ul.itemlist a:hover
 main
 {
     position: relative;
-    width: 69em;
+    width: 75em;
     margin: auto;
 }
 
 section.contenuto_in_evidenza
 {
     margin-top: 3.4em;
-    float: right;
+    float: left;
 }
 
 h2
@@ -215,12 +215,48 @@ a.linkAside:hover
     color: #5C1098;
 }
 
+/*formattazione menù della selezione della tipologia*/
+#menu_selezione_tipologia
+{
+    margin-top: 2.4em;
+}
+
+li.selezione_elemento
+{
+    display: inline-block;
+    font-weight: 600;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1.7em;
+    box-sizing: border-box;
+}
+
+li.selezione_elemento:hover
+{
+    border-bottom: 2px solid #8711E3;
+}
+
+li.selezione_elemento a
+{
+    text-decoration: none;
+    color: #8711E3;
+}
+
+li.selezione_elemento a:active
+{
+    color: #5C1098;
+}
 
 /*formattazione form con dati utente*/
 form.form_iscrizione
 {
     display: block;
     margin-top: 3em;
+}
+
+form.form_registra_libro
+{
+    display: block;
 }
 
 fieldset.form_iscrizione
@@ -262,6 +298,33 @@ input.form_iscrizione
     border-radius: 10px;
 }
 
+input.form_iscrizione_number
+{
+    float: left;
+    margin: 0.4em 4.1em 0 0;
+    padding: 12px 53px 10px 12px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+select.form_iscrizione
+{
+    float: left;
+    margin: 0.4em 4.1em 0 0;
+    padding: 12px 175px 10px 12px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+select.form_iscrizione_genere_multimedia
+{
+    float: left;
+    margin: 0.4em 4.1em 0 0;
+    padding: 12px 205px 10px 12px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
 #date
 {
     padding: 12px 200px 10px 12px;
@@ -298,6 +361,20 @@ button.cerca_box_main:active
 
 
 /*formattazione tasto per tornare ad inizio pagina*/
+.torna_su
+{
+    display: inline-block;
+    background-color: #701DB2;
+    width: 2.7em;
+    height: 2.7em;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
 .torna_su:active
 {
     background-color: #420c6c;
