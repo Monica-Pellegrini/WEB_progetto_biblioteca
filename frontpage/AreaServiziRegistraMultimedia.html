@@ -108,98 +108,81 @@
 
     <!--contenuto-->
     <section class="contenuto_in_evidenza">
-        <h2>Modifica Account</h2>
-        <h3>visualizza e modifica i dati del tuo account</h3>
+        <h2>Registra Elemento</h2>
+        <h3>registra un nuovo elemento nel catalogo</h3>
         <br>
         <small>il simbolo * indica un campo obbligatorio</small>
-        <form class="form_iscrizione" name="iscrivitiForm" method="get" role="form">
+        <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
+            <ul role="menu">
+                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraLibri.html">Libri</a></li>
+                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraGiornali.html">Giornali</a></li>
+                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraMultimedia.html">Multimedia</a></li>
+            </ul>
+        </nav>
+        <form class="form_registra_libro" name="iscrivitiForm" method="get" role="form">
             <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Account</legend>
+                <legend class="form_iscrizione">Dati Multimedia</legend>
                 <span class="form_iscrizione">
-                <label class="label_iscrizione">Email<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="email" role="textbox" name="email" value="lara.croft@gmail.com" maxlength="50" size="32" required/>
-                </label>
-            </span>
-            </fieldset>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Informazioni Anagrafiche</legend>
-                <span class="form_iscrizione">
-                <label class="label_iscrizione">Nome<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="nome" value="Lara" maxlength="50" size="32" required/>
-                </label>
-                <label class="label_iscrizione">Cognome<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="cognome" value="Croft" maxlength="50" size="32" required/>
-                </label>
-
-            </span>
-            <span class="form_iscrizione">
-                <label class="label_iscrizione">Codice Fiscale<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="cod_fisc" value="CRFLRR96C45R960A" maxlength="50" size="32" required/>
-                </label>
-                <label class="label_iscrizione">Luogo di Nascita<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="luogo_nascita" value="Londra" maxlength="50" size="32" required/>
-                </label>
-            </span>
-            <span class="form_iscrizione">
-                <label class="label_iscrizione">Numero di Telefono<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="tel" role="textbox" name="numero_tel" value="3899821771" maxlength="50" size="32" required/>
-                </label>
-                <label class="label_iscrizione">Data di Nascita<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input id="date" class="form_iscrizione" type="date" role="textbox" name="data_nascita" value="1968-02-14" maxlength="50" required/>
-                </label>
-            </span>
-            </fieldset>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Indirizzo</legend>
-                <span class="form_iscrizione">
-                     <label class="label_iscrizione">Via<sup title="Campo obbligatorio">*</sup>
-                         <br>
-                         <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="Corso Del Popolo" maxlength="50" size="32" required/>
-                     </label>
-                     <label class="label_iscrizione">Civico<sup title="Campo obbligatorio">*</sup>
-                         <br>
-                         <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="6" maxlength="50" size="32" required/>
-                     </label>
-                </span>
-                <span class="form_iscrizione">
-                    <label class="label_iscrizione">CAP<sup title="Campo obbligatorio">*</sup>
-                         <br>
-                         <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="45100" maxlength="50" size="32" required/>
-                    </label>
-                    <label class="label_iscrizione">Città<sup title="Campo obbligatorio">*</sup>
+                    <label class="label_iscrizione">Tipologia<sup title="Campo obbligatorio">*</sup>
                         <br>
-                        <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="Rovigo" maxlength="50" size="32" required/>
+                        <select class="form_iscrizione" name="tipo">
+                            <option value="dvd" selected>DVD</option>
+                            <option value="cd">CD</option>
+                        </select>
                     </label>
                 </span>
                 <span class="form_iscrizione">
-                    <label class="label_iscrizione">Sigla Provincia<sup title="Campo obbligatorio">*</sup>
+                    <label class="label_iscrizione">Titolo<sup title="Campo obbligatorio">*</sup>
                         <br>
-                        <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="RO" maxlength="50" size="32" required/>
+                        <input class="form_iscrizione" type="text" role="textbox" name="nome" value="" maxlength="50" size="32" required/>
+                    </label>
+                    <label class="label_iscrizione">Editore<sup title="Campo obbligatorio">*</sup>
+                        <br>
+                        <input class="form_iscrizione" type="text" role="textbox" name="EDITORE" value="" maxlength="50" size="32" required/>
+                    </label>
+                </span>
+                <span class="form_iscrizione">
+                    <label class="label_iscrizione">Genere<sup title="Campo obbligatorio">*</sup>
+                        <br>
+                        <select class="form_iscrizione_genere_multimedia" name="genere">
+                            <optgroup label="DVD">
+                                <option value="all" selected>Tutti i generi</option>
+                                <option value="horror">Horror</option>
+                                <option value="drammatico">Drammatico</option>
+                                <option value="commedia">Commedia</option>
+                                <option value="thriller">Thriller</option>
+                                <option value="fantascienza">Fantascienza</option>
+                                <option value="romantico">Romantico</option>
+                                <option value="documentario">documentario</option>
+                                <option value="animazione">animazione</option>
+                                <option value="western">western</option>
+                                <option value="altro">Altro</option>
+                            </optgroup>
+                            <optgroup label="CD">
+                                <option value="blues">Blues</option>
+                                <option value="metal">Metal</option>
+                                <option value="country">Country</option>
+                                <option value="folk">Folk</option>
+                                <option value="funk">Funk</option>
+                                <option value="jazz">Jazz</option>
+                                <option value="musica classica">Musica Classica</option>
+                                <option value="pop">Pop</option>
+                                <option value="punk">Punk</option>
+                                <option value="rock">Rock</option>
+                                <option value="altro">Altro</option>
+                        </optgroup>
+                        </select>
+                    </label>
+                    <label class="label_iscrizione">Immagine Copertina
+                        <br>
+                        <input class="form_iscrizione" type="url" role="textbox" name="IMM_COPERTINA" value="" maxlength="50" size="32"/>
                     </label>
                 </span>
             </fieldset>
             <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Preferenze</legend>
-                <label class="label_iscrizione">
-                    <input class="checkbox_box_main" type="checkbox" name="date" value="notifiche" checked
-                           title="Ricevi email con i libri più votati e notifche su quando gli elementi nella tua
-                           wishlist tornano disponibili"/>Iscriviti Alla Newsletter
-                    <br>
-                </label>
-            </fieldset>
-                <button class="cerca_box_main" type="submit" role="button">
-                    SALVA
-                </button>
+            <button class="cerca_box_main" type="submit" role="button">
+                REGISTRA
+            </button>
         </form>
     </section>
 

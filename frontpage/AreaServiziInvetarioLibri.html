@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/AreaServiziPrestitiStyle.css" />
+  <meta
+          charset="UTF-8"
+          name="description"
+          content="Homepage del sito contiene informazioni sui libri consigliati, nuove uscite ed eventi in evidenza">
+</head>
+
+<body>
+<!--skip per l'accessibilità-->
+<article id="hiddenKeys">
+  <a accesskey="c" href="#main">vai al contenuto della pagina</a>
+  <a accesskey="p" href="#primo_link_footer">vai al pié di pagina</a>
+</article>
+
+<!--Inizio Header-->
+<header id="header">
+  <section>
+    <a href="Homepage.html" aria-label="Home">
+      <img id="logo" src="images/SBPRO.png" alt="Clicca qui per tornare all'homepage" role="button">
+    </a>
+  </section>
+  <section class="searchbar" role="navigation" aria-label="BarraRicerca">
+    <form name="searchForm" method="get" role="form">
+      <label></label>
+      <button id="Bottonelente" type="submit" role="button">
+        <img id="submit" src="images/lente.png" alt="Clicca qui per per cercare" role="button">
+      </button>
+      <span class="searchbar">
+          <label>
+              <!--non l'ho messo required perché ho pensato possa funzionare pure come un cerca fra catalogo-->
+              <input type="search" role="textbox" id="search" name="search" value="" maxlength="50"  placeholder="Cerca..." size="19"/>
+               <select name="elemento">
+                 <option value="libri" selected>Libri</option>
+                 <option value="giornali">Giornali</option>
+                 <option value="media">Multimedia</option>
+               </select>
+          </label>
+      </span>
+    </form>
+  </section>
+  <nav role="navigation" aria-label="Menù User">
+    <ul role="menu">
+      <li role="menuitem">
+        <ul class="filtri" role="menu">
+          <li role="menuitem"><a class="BottoneHeader" href="RicercaAvanzata.html">Ricerca Avanzata</a></li>
+        </ul>
+        <ul class="itemlist" role="menu">
+          <li role="menuitem" id="iscriviti"><a class="BottoneHeader" href="Iscriviti.html">Iscriviti</a></li>
+          <li role="menuitem"><a id="BottoneAccedi"  class="BottoneHeader" href="Accedi.html">Accedi</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!--Main-->
+<main id="main" class="clearfix" role="main">
+
+  <!--Barra laterale con tutte le funzioni che  un bibliotecario può fare-->
+  <aside>
+    <nav>
+      <p class="aside">Il mio Account</p>
+      <ul>
+        <li title="visualizza e modifica i dati del tuo account"><a class="linkAside" href="AreaServiziDati.html">I miei dati</a></li>
+        <li title="visualizza le biblioteche a cui sei registrato"><a class="linkAside" href="AreaServiziMieBiblioteche.html">Le mie biblioteche</a></li>
+        <li title="visualizza gli elementi che hai preso in prestito"><a class="linkAside" href="AreaServiziDatiMieiPrestitiLibri.html">I miei prestiti</a></li>
+        <li title="visualizza gli eventi a cui ti sei iscritto"><a class="linkAside" href="AreaServiziMieiEventi.html">I miei eventi</a></li>
+        <li title="visualizza e modifica gli elementi nella tua whislist"><a class="linkAside" href="AreaServiziWishlistLibri.html">Wishlist</a></li>
+      </ul>
+      <br>
+      <p class="aside">Gestione elementi</p>
+      <ul>
+        <li title="registra un nuovo elemento nel catalogo"><a class="linkAside" href="AreaServiziRegistraLibri.html">Registra elemento</a></li>
+        <li title="registra una nuova copia di un elemento già registrato nel catalogo"><a class="linkAside" href="AreaServiziRegistraCopiaLibri.html">Registra Copia</a></li>
+        <li title="visualizza l'inventario della biblioteca in cui lavori"><a class="linkAside" href="AreaServiziInvetarioLibri.html">Inventario biblioteca</a></li>
+      </ul>
+      <br>
+      <p class="aside">Prestiti</p>
+      <ul>
+        <li title="effettua un nuovo prestito"><a class="linkAside" href="AreaServiziNuovoPrestito.html">Nuovi prestiti</a></li>
+        <li title="visualizza i prestiti in corso nella tua biblioteca"><a class="linkAside" href="AreaServiziPrestiti.html">Prestiti in corso</a></li>
+      </ul>
+      <br>
+      <p class="aside">Richieste</p>
+      <ul>
+        <li title="richiedi la copia di un elemento ad un altra biblioteca"><a class="linkAside" href="AreaServiziRichiedi.html">Richiedi copia</a></li>
+        <li title="visualizza le richieste che le altre biblioteche hanno fatto alla tua"><a class="linkAside" href="AreaServiziRichiesteEsterne.html">Richieste esterne</a></li>
+      </ul>
+      <br>
+      <p class="aside">Utenti</p>
+      <ul>
+        <li title="registra un nuovo utente alla tua biblioteca"><a class="linkAside" href="AreaServiziRegistraUtente.html">Registra utente</a></li>
+        <li title="visualizza tutti gli utenti registrati alla tua biblioteca e gestisci i loro profili"><a class="linkAside" href="AreaServiziListaUtenti.html">Lista utenti biblioteca</a></li>
+      </ul>
+      <br>
+      <p class="aside">Eventi</p>
+      <ul>
+        <li title="orgranizza un nuovo evento per la tua biblioteca"><a class="linkAside" href="AreaServiziOrganizzaEvento.html">Organizza evento</a></li>
+        <li title="visualizza tutti gli eventi organizzati dalla tua biblioteca"><a class="linkAside" href="AreaServiziStoricoEventi.html">Storico eventi</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!--contenuto-->
+  <section class="contenuto_in_evidenza">
+    <h2>Inventario Biblioteca</h2>
+    <h3>visualizza l'inventario della biblioteca in cui lavori</h3>
+    <br>
+    <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
+      <ul role="menu">
+        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziInvetarioLibri.html">Libri</a></li>
+        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziInvetarioGiornali.html">Giornali</a></li>
+        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziInvetarioMultimedia.html">Multimedia</a></li>
+      </ul>
+    </nav>
+    <div class="inventario">
+        <p class="titolo_wish">La donna di picche / Aleksandr Sergeevic Puskin</p>
+        <div class="inventario_left">
+          <p class="dati"><span class="bold">Editore: </span>BUR Rizzoli jdoij odsjfopsdj dsoijfd</p>
+          <p class="dati"><span class="bold">Dimensione: </span>13 x 0,69 x 19,8</p>
+          <p class="dati"><span class="bold">Stato: </span>Ammesso al prestito</p>
+        </div>
+        <div class="inventario_right">
+          <p class="dati"><span class="bold">Lingua: </span>Italiano</p>
+          <p class="dati"><span class="bold">N° Ristampa: </span>3</p>
+          <p class="dati"><span class="bold">N° Pagine: </span> </p>
+        </div>
+    </div>
+    <div class="inventario">
+      <p class="titolo_wish">La donna di picche / Aleksandr Sergeevic Puskin</p>
+      <div class="inventario_left">
+        <p class="dati"><span class="bold">Editore: </span>BUR Rizzoli jdoij odsjfopsdj dsoijfd</p>
+        <p class="dati"><span class="bold">Dimensione: </span>13 x 0,69 x 19,8</p>
+        <p class="dati"><span class="bold">Stato: </span>Ammesso al prestito</p>
+      </div>
+      <div class="inventario_right">
+        <p class="dati"><span class="bold">Lingua: </span>Italiano</p>
+        <p class="dati"><span class="bold">N° Ristampa: </span>3</p>
+        <p class="dati"><span class="bold">N° Pagine: </span> </p>
+      </div>
+    </div>
+    <div class="inventario">
+      <p class="titolo_wish">La donna di picche / Aleksandr Sergeevic Puskin</p>
+      <div class="inventario_left">
+        <p class="dati"><span class="bold">Editore: </span>BUR Rizzoli jdoij odsjfopsdj dsoijfd</p>
+        <p class="dati"><span class="bold">Dimensione: </span>13 x 0,69 x 19,8</p>
+        <p class="dati"><span class="bold">Stato: </span>Ammesso al prestito</p>
+      </div>
+      <div class="inventario_right">
+        <p class="dati"><span class="bold">Lingua: </span>Italiano</p>
+        <p class="dati"><span class="bold">N° Ristampa: </span>3</p>
+        <p class="dati"><span class="bold">N° Pagine: </span> </p>
+      </div>
+    </div>
+    <div class="inventario">
+      <p class="titolo_wish">La donna di picche / Aleksandr Sergeevic Puskin</p>
+      <div class="inventario_left">
+        <p class="dati"><span class="bold">Editore: </span>BCreateSpace Independent Publishing Platform</p>
+        <p class="dati"><span class="bold">Dimensione: </span></p>
+        <p class="dati"><span class="bold">Stato: </span>Smarrito</p>
+      </div>
+      <div class="inventario_right">
+        <p class="dati"><span class="bold">Lingua: </span>Russo</p>
+        <p class="dati"><span class="bold">N° Ristampa: </span>3</p>
+        <p class="dati"><span class="bold">N° Pagine: </span>18454</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Link a inizio pagina-->
+  <div class="torna_su">
+    <a href="#header"><img id="freccia" role="button" src="images/freccia.png" alt="Clicca qui per tornare in cima alla pagina"></a>
+  </div>
+</main>
+
+
+
+<!--footer-->
+<footer>
+  <!--Prima colonna-->
+  <nav class="footer-nav" role="navigation" aria-label="link footer">
+    <ul class="prima_colonna" role="menu">
+      <li id="primo_link_footer" role="menuitem"><a href="home.html">Home Page</a></li>
+      <li role="menuitem"><a href="faq.html">FAQs</a></li>
+      <li role="menuitem"><a href="sponsor.html">Sponsorizzazioni</a></li>
+    </ul>
+    <!--Seconda colonna-->
+    <ul class="seconda_colonna" role="menu">
+      <li role="menuitem"><a href="user_sup.html">Supporto utente</a></li>
+      <li role="menuitem"><a href="tec_sup.html">Supporto tecnico</a></li>
+      <li role="menuitem"><a href="segnala.html">Segnala questo evento</a></li>
+    </ul>
+    <!--Terza colonna-->
+    <ul class="terza_colonna" role="menu">
+      <li role="menuitem"><a href="privacy.html">Privacy</a></li>
+      <li role="menuitem"> <a href="cookies.html">Cookies</a></li>
+      <li role="menuitem"><a href="terms.html">Termini di utilizzo</a></li>
+    </ul>
+  </nav>
+</footer>
+</body>
+</html>
