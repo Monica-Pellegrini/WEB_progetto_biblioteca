@@ -31,16 +31,16 @@
         <img id="submit" src="images/lente.png" alt="Clicca qui per per cercare" role="button">
       </button>
       <span class="searchbar">
-                    <label>
-                        <!--non l'ho messo required perché ho pensato possa funzionare pure come un cerca fra catalogo-->
-                        <input type="search" role="textbox" id="search" name="search" value="" maxlength="50"  placeholder="Cerca..." size="19"/>
-                        <select name="elemento">
-                            <option value="libri" selected>Libri</option>
-                            <option value="giornali">Giornali</option>
-                            <option value="media">Multimedia</option>
-                        </select>
-                    </label>
-                </span>
+          <label>
+              <!--non l'ho messo required perché ho pensato possa funzionare pure come un cerca fra catalogo-->
+              <input type="search" role="textbox" id="search" name="search" value="" maxlength="50"  placeholder="Cerca..." size="19"/>
+               <select name="elemento">
+                 <option value="libri" selected>Libri</option>
+                 <option value="giornali">Giornali</option>
+                 <option value="media">Multimedia</option>
+               </select>
+          </label>
+      </span>
     </form>
   </section>
   <nav role="navigation" aria-label="Menù User">
@@ -59,10 +59,10 @@
 </header>
 
 <!--Main-->
-<main id="main" class="clearfix" role="main">
+<main id="main" class="main_inventario" role="main">
 
   <!--Barra laterale con tutte le funzioni che  un bibliotecario può fare-->
-  <aside class="normale">
+  <aside>
     <nav>
       <p class="aside">Il mio Account</p>
       <ul>
@@ -107,41 +107,53 @@
   </aside>
 
   <!--contenuto-->
-  <section class="contenuto_in_evidenza">
-    <h2>I Miei Prestiti</h2>
-    <h3>visualizza gli elementi che hai preso in prestito</h3>
+  <section class="contenuto_in_evidenza_prestiti">
+    <h2>Prestiti In Corso</h2>
+    <h3>visualizza i prestiti in corso nella tua biblioteca</h3>
     <br>
     <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
       <ul role="menu">
-        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziDatiMieiPrestitiLibri.html">Libri</a></li>
-        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziDatiMieiPrestitiGiornali.html">Giornali</a></li>
-        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziDatiMieiPrestitiMultimedia.html">Multimedia</a></li>
+        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziPrestitiLibri.html">Libri</a></li>
+        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziPrestitiGiornali.html">Giornali</a></li>
+        <li class="selezione_elemento" role="menuitem"><a href="AreaServiziPrestitiMultimedia.html">Multimedia</a></li>
       </ul>
     </nav>
-    <div class="biblioteche">
-      <p class="titolo">Elle Italia 18 / Hearts Magazines Italia</p>
-      <p class="dati"><span class="bold">presso: </span> Biblioteca di Badia Polesine</p>
-      <p class="dati"><span class="bold">data inizio prestito: </span>2024-01-05</p>
-      <p class="dati"><span class="bold">data scandenza prestito: </span>2024-01-25</p>
-      <p class="dati"><span class="bold">data restituzione: DA RESTITUIRE</span></p>
-    </div>
-    <div class="biblioteche">
-      <p class="titolo">La campana di S. Pietro bollettino religioso settimanale 5 / Libreria G. Amori</p>
-      <p class="dati"><span class="bold">presso: </span>Biblioteca dell’Accademia dei Concordi</p>
-      <p class="dati"><span class="bold">data inizio prestito: </span>2024-01-05</p>
-      <p class="dati"><span class="bold">data scandenza prestito: </span>2024-01-25</p>
-      <p class="dati"><span class="bold">data restitruzione: </span>2024-01-25</p>
-    </div>
-    <div class="biblioteche">
-      <p class="titolo">Classic Rock - I protagonisti del rock 1 / Sperea</p>
-      <p class="dati"><span class="bold">presso: </span>Biblioteca dell’Accademia dei Concordi</p>
-      <p class="dati"><span class="bold">data inizio prestito: </span>2024-01-05</p>
-      <p class="dati"><span class="bold">data scandenza prestito: </span>2024-01-25</p>
-      <p class="dati"><span class="bold">data restitruzione: </span>2024-01-25</p>
-    </div>
-  </section>
+    <section id="box_main">
+      <div class="contenitore_box_main">
+        <h2 class="box_main">CERCA FRA I PRESTITI IN CORSO</h2>
+        <form class="form_box_main" name="searchForm" method="get" role="form">
+                <span class="form_box_main">
+                    <label class="label_box_main">Codice Comune
+                      <br>
+                      <input class="form_box_main" type="search" role="textbox" name="COMUNE_PRESTITO" value="" maxlength="50" size="28"/>
+                    </label>
+                    <label class="label_box_main">N° Inventario
+                      <br>
+                      <input class="form_box_main" type="search" role="number" name="INVENTARIO_PRESTITO" value="" maxlength="50" size="28"/>
+                    </label>
+                </span>
+                <button class="cerca_box_main" type="submit" role="button">
+                CERCA
+                </button>
+        </form>
+      </div>
+    </section>
+    <a href="AreaServiziGestitsciPrestitoGiornali.html">
+      <div class="prestiti">
+          <p class="dati"><span class="bold">Codice Comune: </span>TRC</p>
+          <p class="dati"><span class="bold">N° Inventario: </span>13</p>
+          <p class="dati"><span class="bold">Utente: </span>Mario Rossi</p>
+      </div>
+    </a>
+    <a href="AreaServiziGestitsciPrestitoGiornali.html">
+      <div class="prestiti">
+        <p class="dati"><span class="bold">Codice Comune: </span>BDP</p>
+        <p class="dati"><span class="bold">N° Inventario: </span>138</p>
+        <p class="dati"><span class="bold">Utente: </span> Islam Hagag detto Alex Cologno da siena</p>
+      </div>
+    </a>
 
-  <!--Link a inizio pagina-->
+    <!--Link a inizio pagina-->
   <div class="torna_su">
     <a href="#header"><img id="freccia" role="button" src="images/freccia.png" alt="Clicca qui per tornare in cima alla pagina"></a>
   </div>

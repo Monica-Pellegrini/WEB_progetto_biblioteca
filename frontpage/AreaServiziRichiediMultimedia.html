@@ -3,7 +3,7 @@
 
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/AreaServiziStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/AreaServiziEventiStyle.css" />
     <meta
             charset="UTF-8"
             name="description"
@@ -108,56 +108,48 @@
 
     <!--contenuto-->
     <section class="contenuto_in_evidenza">
-        <h2>Registra Copia</h2>
-        <h3>registra una nuova copia di un elemento già registrato nel catalogo</h3>
+        <h2>Richiedi Copia Elemento</h2>
+        <h3>richiedi copia di un elemento da un'altra biblioteca</h3>
         <br>
-        <small>il simbolo * indica un campo obbligatorio</small>
         <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
             <ul role="menu">
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaLibri.html">Libri</a></li>
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaGiornali.html">Giornali</a></li>
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaMultimedia.html">Multimedia</a></li>
+                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRichiediLibro.html">Libri</a></li>
+                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRichiediGiornale.html">Giornali</a></li>
+                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRichiediMultimedia.html">Multimedia</a></li>
             </ul>
         </nav>
-        <form class="form_registra_libro" name="iscrivitiForm" method="get" role="form">
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Biblioteca</legend>
-                <!--MODIFICA non mi ricordo se va inserita manualemente o meno-->
-                <label class="label_iscrizione">Sigla Comune<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="COMUNE" value="" maxlength="50" size="32" required/>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Giornale</legend>
-                <label class="label_iscrizione">ISSN<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="ISSN" value="" maxlength="50" size="32" required/>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Copia Giornale</legend>
-                    <label class="label_iscrizione">Stato<sup title="Campo obbligatorio">*</sup>
+        <section id="box_main">
+            <div class="contenitore_box_main">
+                <h2 class="box_main">CERCA I LIBRO DI CUI RICHIEDERE LA COPIA</h2>
+                <form class="form_box_main" name="searchForm" method="get" role="form">
+                <span class="form_box_main">
+                    <label class="label_box_main">Tipologia
                         <br>
-                        <select class="form_iscrizione" name="STATO">
-                            <option value="ammesso al prestito">Ammesso Al Prestito</option>
-                            <option value="prestato">Prestato</option>
-                            <option value="prenotato">Prenotato</option>
-                            <option value="in transito">In Transito</option>
-                            <option value="solo consultazione">Solo Consultazione</option>
-                            <option value="smarrito">Smarrito</option>
+                        <select class="form_box_main" name="tipo">
+                            <option value="dvd" selected>DVD</option>
+                            <option value="cd">CD</option>
                         </select>
                     </label>
-            </fieldset>
-            <br>
-            <button class="cerca_box_main" type="submit" role="button">
-                REGISTRA
-            </button>
-        </form>
+                    <label class="label_box_main">Titolo
+                        <br>
+                        <input class="form_box_main" type="search" role="textbox" name="Titolo" value="" maxlength="50" size="28"/>
+                    </label>
+                </span>
+                <button class="cerca_box_main" type="submit" role="button">
+                    CERCA
+                </button>
+                </form>
+            </div>
+        </section>
+        <!--Risultati della ricerca-->
+        <a href="AreaServiziRichiediCopiaMultimedia.html">
+            <div class="elemento">
+                <p class="titolo">BARBIE IN LE 12 PRINCIPESSE DANZANTI</p>
+                <p class="dati"><span class="bold">Tipologia: </span>DVD</p>
+                <p class="dati"><span class="bold">Editore: </span>Universal</p>
+                <p class="dati"><span class="bold">genere: </span>animazione</p>
+            </div>
+        </a>
     </section>
 
     <!--Link a inizio pagina-->

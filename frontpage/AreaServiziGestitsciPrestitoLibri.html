@@ -108,54 +108,71 @@
 
     <!--contenuto-->
     <section class="contenuto_in_evidenza">
-        <h2>Registra Copia</h2>
-        <h3>registra una nuova copia di un elemento già registrato nel catalogo</h3>
+        <h2>Gestisci Prestito</h2>
+        <h3>modifica dati del prestito o chiudilo</h3>
         <br>
         <small>il simbolo * indica un campo obbligatorio</small>
-        <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
-            <ul role="menu">
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaLibri.html">Libri</a></li>
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaGiornali.html">Giornali</a></li>
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaMultimedia.html">Multimedia</a></li>
-            </ul>
-        </nav>
-        <form class="form_registra_libro" name="iscrivitiForm" method="get" role="form">
+        <br>
+        <br>
+        <br>
+        <form class="form_registra_libro" name="prestitoForm" method="get" role="form">
+            <!--MODIFICA forse qui si può fare un unica pagina (senza avere separati copia giornale multimedia e libri) con javascript-->
             <fieldset class="form_iscrizione">
                 <legend class="form_iscrizione">Dati Biblioteca</legend>
-                <!--MODIFICA non mi ricordo se va inserita manualemente o meno-->
-                <label class="label_iscrizione">Sigla Comune<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="COMUNE" value="" maxlength="50" size="32" required/>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Giornale</legend>
-                <label class="label_iscrizione">ISSN<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="ISSN" value="" maxlength="50" size="32" required/>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Copia Giornale</legend>
-                    <label class="label_iscrizione">Stato<sup title="Campo obbligatorio">*</sup>
-                        <br>
-                        <select class="form_iscrizione" name="STATO">
-                            <option value="ammesso al prestito">Ammesso Al Prestito</option>
-                            <option value="prestato">Prestato</option>
-                            <option value="prenotato">Prenotato</option>
-                            <option value="in transito">In Transito</option>
-                            <option value="solo consultazione">Solo Consultazione</option>
-                            <option value="smarrito">Smarrito</option>
-                        </select>
+                <span class="form_iscrizione">
+                    <label class="label_iscrizione">Sigla Comune<sup title="Campo obbligatorio">*</sup>
+                       <br>
+                       <input class="form_iscrizione" type="text" role="textbox" name="COMUNE" value="TRC" maxlength="50" size="32" required/>
                     </label>
+                    <label class="label_iscrizione">Numero Inventario<sup title="Campo obbligatorio">*</sup>
+                      <br>
+                      <input class="form_iscrizione" type="number" role="textbox" name="INVENTARIO_PRESTITO" value="2" maxlength="50" size="32" required/>
+                    </label>
+                </span>
+            </fieldset>
+            <br>
+            <fieldset class="form_iscrizione">
+                <legend class="form_iscrizione">Dati Libro</legend>
+                <span class="form_iscrizione">
+                     <label class="label_iscrizione">ISBN<sup title="Campo obbligatorio">*</sup>
+                        <br>
+                        <input class="form_iscrizione" type="text" role="textbox" name="ISBN" value="8787797" maxlength="50" size="32" required/>
+                    </label>
+                </span>
+            </fieldset>
+            <br>
+            <br>
+            <fieldset class="form_iscrizione">
+                <legend class="form_iscrizione">Dati Utente</legend>
+                <span class="form_iscrizione">
+                    <label class="label_iscrizione">Utente<sup title="Campo obbligatorio">*</sup>
+                    <br>
+                    <select class="form_iscrizione" name="ID_UTENTE">
+                        <option value=""></option>
+                        <option value="1">Mario Rossi 1996-03-12</option>
+                        <option value="2" selected>Gloria Pareschi 2002-11-25</option>
+                    </select>
+                </label>
+                </span>
+            </fieldset>
+            <br>
+            <br>
+            <fieldset class="form_iscrizione">
+                <legend class="form_iscrizione">Data Prestito</legend>
+                <span class="form_iscrizione">
+                    <label class="label_iscrizione">Data Inizio Prestito<sup title="Campo obbligatorio">*</sup>
+                    <br>
+                    <input class="form_iscrizione" type="date" role="textbox" name="DATA_INIZIO_PRESTITO" value="2002-03-09" maxlength="50" size="32" required/>
+                    </label>
+                    <label id="data_fine" class="label_iscrizione">Data Fine Prestito
+                    <br>
+                    <input class="form_iscrizione" type="date" role="textbox" name="DATA_FINE_PRESTITO" value="" maxlength="50" size="32"/>
+                    </label>
+                </span>
             </fieldset>
             <br>
             <button class="cerca_box_main" type="submit" role="button">
-                REGISTRA
+                SALVA
             </button>
         </form>
     </section>

@@ -82,14 +82,14 @@
             <br>
             <p class="aside">Prestiti</p>
             <ul>
-                <li title="effettua un nuovo prestito"><a class="linkAside" href="AreaServiziNuovoPrestito.html">Nuovi prestiti</a></li>
-                <li title="visualizza i prestiti in corso nella tua biblioteca"><a class="linkAside" href="AreaServiziPrestiti.html">Prestiti in corso</a></li>
+                <li title="effettua un nuovo prestito"><a class="linkAside" href="AreaServiziNuovoPrestitoLibri.html">Nuovi prestiti</a></li>
+                <li title="visualizza i prestiti in corso nella tua biblioteca"><a class="linkAside" href="AreaServiziPrestitiLibri.html">Prestiti in corso</a></li>
             </ul>
             <br>
             <p class="aside">Richieste</p>
             <ul>
-                <li title="richiedi la copia di un elemento ad un altra biblioteca"><a class="linkAside" href="AreaServiziRichiedi.html">Richiedi copia</a></li>
-                <li title="visualizza le richieste che le altre biblioteche hanno fatto alla tua"><a class="linkAside" href="AreaServiziRichiesteEsterne.html">Richieste esterne</a></li>
+                <li title="richiedi la copia di un elemento ad un altra biblioteca"><a class="linkAside" href="AreaServiziRichiediLibro.html">Richiedi copia</a></li>
+                <li title="visualizza le richieste che le altre biblioteche hanno fatto alla tua"><a class="linkAside" href="AreaServiziRichiesteEsterneLibri.html">Richieste esterne</a></li>
             </ul>
             <br>
             <p class="aside">Utenti</p>
@@ -108,8 +108,8 @@
 
     <!--contenuto-->
     <section class="contenuto_in_evidenza">
-        <h2>Registra Elemento</h2>
-        <h3>registra un nuovo elemento nel catalogo</h3>
+        <h2>Registra Copia</h2>
+        <h3>registra una nuova copia di un elemento già registrato nel catalogo</h3>
         <br>
         <small>il simbolo * indica un campo obbligatorio</small>
         <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
@@ -141,7 +141,6 @@
             <br>
             <fieldset class="form_iscrizione">
                 <legend class="form_iscrizione">Dati Copia Multimedia</legend>
-                <span class="form_iscrizione">
                     <label class="label_iscrizione">Stato<sup title="Campo obbligatorio">*</sup>
                         <br>
                         <select class="form_iscrizione" name="STATO">
@@ -153,7 +152,6 @@
                             <option value="smarrito">Smarrito</option>
                         </select>
                     </label>
-            </span>
             </fieldset>
             <br>
             <button class="cerca_box_main" type="submit" role="button">

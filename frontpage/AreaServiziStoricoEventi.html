@@ -3,7 +3,7 @@
 
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/AreaServiziStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/AreaServiziEventiStyle.css" />
     <meta
             charset="UTF-8"
             name="description"
@@ -108,56 +108,33 @@
 
     <!--contenuto-->
     <section class="contenuto_in_evidenza">
-        <h2>Registra Copia</h2>
-        <h3>registra una nuova copia di un elemento già registrato nel catalogo</h3>
+        <h2>Storico Eventi</h2>
+        <h3>visualizza tutti gli eventi organizzati dalla tua biblioteca</h3>
         <br>
-        <small>il simbolo * indica un campo obbligatorio</small>
-        <nav id="menu_selezione_tipologia" role="navigation" aria-label="Menù selezione tipologia">
-            <ul role="menu">
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaLibri.html">Libri</a></li>
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaGiornali.html">Giornali</a></li>
-                <li class="selezione_elemento" role="menuitem"><a href="AreaServiziRegistraCopiaMultimedia.html">Multimedia</a></li>
-            </ul>
-        </nav>
-        <form class="form_registra_libro" name="iscrivitiForm" method="get" role="form">
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Biblioteca</legend>
-                <!--MODIFICA non mi ricordo se va inserita manualemente o meno-->
-                <label class="label_iscrizione">Sigla Comune<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="COMUNE" value="" maxlength="50" size="32" required/>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Giornale</legend>
-                <label class="label_iscrizione">ISSN<sup title="Campo obbligatorio">*</sup>
-                    <br>
-                    <input class="form_iscrizione" type="text" role="textbox" name="ISSN" value="" maxlength="50" size="32" required/>
-                </label>
-            </fieldset>
-            <br>
-            <br>
-            <fieldset class="form_iscrizione">
-                <legend class="form_iscrizione">Dati Copia Giornale</legend>
-                    <label class="label_iscrizione">Stato<sup title="Campo obbligatorio">*</sup>
-                        <br>
-                        <select class="form_iscrizione" name="STATO">
-                            <option value="ammesso al prestito">Ammesso Al Prestito</option>
-                            <option value="prestato">Prestato</option>
-                            <option value="prenotato">Prenotato</option>
-                            <option value="in transito">In Transito</option>
-                            <option value="solo consultazione">Solo Consultazione</option>
-                            <option value="smarrito">Smarrito</option>
-                        </select>
-                    </label>
-            </fieldset>
-            <br>
-            <button class="cerca_box_main" type="submit" role="button">
-                REGISTRA
-            </button>
-        </form>
+        <div class="eventi">
+            <p class="titolo">Concerto di beneficenza: Annalisa</p>
+            <p class="dati"><span class="bold">data: </span>03/09/2024</p>
+            <p class="dati"><span class="bold">luogo: </span>Piazzale Europa a Rosolina Mare</p>
+            <p class="dati"><span class="bold">descrizione: </span>
+                Concerto di Annalisa organizzato dalla biblioteca diLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vehicula eros, vel lobortis odio efficitur nec. Duis molestie congue massa. Sed rhoncus dolor a dolor tempus, non tempor felis molestie. Maecenas consequat pulvinar luctus. Vestibulum ut velit facilisis, molestie est quis, accumsan dui. Sed pellentesque quis augue id tempus. Proin lacus urna, vulputate at convallis eu, consectetur a sem. Sed eget malesuada neque, et sollicitudin urna. Vestibulum sit amet mauris in purus luctus tempus quis sit amet risus. Proin dictum felis dolor, vitae elementum justo consectetur ac. Nunc cursus blandit elit, in tristique neque volutpat at. Mauris velit erat, interdum fringilla consectetur quis, euismod vitae risus. Suspendisse finibus lorem eu ligula condimentum, in auctor ligula mollis. Praesent nec nulla nec nunc condimentum
+            </p>
+        </div>
+        <div class="eventi">
+            <p class="titolo">Concerto di beneficenza: Annalisa</p>
+            <p class="dati"><span class="bold">data: </span>03/09/2024</p>
+            <p class="dati"><span class="bold">luogo: </span>Piazzale Europa a Rosolina Mare</p>
+            <p class="dati"><span class="bold">descrizione: </span>
+                Concerto di Annalisa organizzato dalla biblioteca di Rosolina come raccolta fondi per la ristrutturazione delle scuole della Palestina
+            </p>
+        </div>
+        <div class="eventi">
+            <p class="titolo">LUX: presentazione</p>
+            <p class="dati"><span class="bold">data: </span>01/10/2024</p>
+            <p class="dati"><span class="bold">luogo: </span>Abbazia della Vangadizza</p>
+            <p class="dati"><span class="bold">descrizione: </span>
+                Presentazione del nuovo fumetto “LUX” di Riot Games
+            </p>
+        </div>
     </section>
 
     <!--Link a inizio pagina-->

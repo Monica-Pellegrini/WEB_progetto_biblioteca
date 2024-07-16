@@ -82,14 +82,14 @@
             <br>
             <p class="aside">Prestiti</p>
             <ul>
-                <li title="effettua un nuovo prestito"><a class="linkAside" href="AreaServiziNuovoPrestito.html">Nuovi prestiti</a></li>
-                <li title="visualizza i prestiti in corso nella tua biblioteca"><a class="linkAside" href="AreaServiziPrestiti.html">Prestiti in corso</a></li>
+                <li title="effettua un nuovo prestito"><a class="linkAside" href="AreaServiziNuovoPrestitoLibri.html">Nuovi prestiti</a></li>
+                <li title="visualizza i prestiti in corso nella tua biblioteca"><a class="linkAside" href="AreaServiziPrestitiLibri.html">Prestiti in corso</a></li>
             </ul>
             <br>
             <p class="aside">Richieste</p>
             <ul>
-                <li title="richiedi la copia di un elemento ad un altra biblioteca"><a class="linkAside" href="AreaServiziRichiedi.html">Richiedi copia</a></li>
-                <li title="visualizza le richieste che le altre biblioteche hanno fatto alla tua"><a class="linkAside" href="AreaServiziRichiesteEsterne.html">Richieste esterne</a></li>
+                <li title="richiedi la copia di un elemento ad un altra biblioteca"><a class="linkAside" href="AreaServiziRichiediLibro.html">Richiedi copia</a></li>
+                <li title="visualizza le richieste che le altre biblioteche hanno fatto alla tua"><a class="linkAside" href="AreaServiziRichiesteEsterneLibri.html">Richieste esterne</a></li>
             </ul>
             <br>
             <p class="aside">Utenti</p>
@@ -171,19 +171,33 @@
                      </label>
                 </span>
                 <span class="form_iscrizione">
-                    <label class="label_iscrizione">CAP<sup title="Campo obbligatorio">*</sup>
-                         <br>
-                         <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="45100" maxlength="50" size="32" required/>
-                    </label>
                     <label class="label_iscrizione">Città<sup title="Campo obbligatorio">*</sup>
                         <br>
                         <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="Rovigo" maxlength="50" size="32" required/>
+                    </label>
+                    <label class="label_iscrizione">CAP<sup title="Campo obbligatorio">*</sup>
+                         <br>
+                         <input class="form_iscrizione" type="number" role="textbox" name="indirizzo" value="45100" maxlength="50" size="32" required/>
                     </label>
                 </span>
                 <span class="form_iscrizione">
                     <label class="label_iscrizione">Sigla Provincia<sup title="Campo obbligatorio">*</sup>
                         <br>
                         <input class="form_iscrizione" type="text" role="textbox" name="indirizzo" value="RO" maxlength="50" size="32" required/>
+                    </label>
+                </span>
+            </fieldset>
+            <br>
+            <fieldset class="form_iscrizione">
+                <legend class="form_iscrizione">Cambia Password</legend>
+                <span class="form_iscrizione">
+                    <label class="label_iscrizione">Vecchia Password
+                        <br>
+                        <input class="form_iscrizione" type="password" role="textbox" name="PASSWORD" value="" maxlength="50" size="32"/>
+                    </label>
+                    <label class="label_iscrizione">Nuova Password
+                        <br>
+                        <input class="form_iscrizione" type="password" role="textbox" name="PASSWORD" value="" maxlength="50" size="32"/>
                     </label>
                 </span>
             </fieldset>
@@ -197,9 +211,9 @@
                     <br>
                 </label>
             </fieldset>
-                <button class="cerca_box_main" type="submit" role="button">
-                    SALVA
-                </button>
+            <button class="cerca_box_main" type="submit" role="button">
+                SALVA
+            </button>
         </form>
     </section>
 
