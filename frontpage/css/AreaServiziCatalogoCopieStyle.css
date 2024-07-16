@@ -13,8 +13,6 @@ body
     position: relative;
 }
 
-/*fromattazione di font e vari*/
-
 /*formattazione del skiplinks per l'accessibilità*/
 #hiddenKeys
 {
@@ -107,7 +105,7 @@ form
 .searchbar select
 {
     padding: 0.59em 48px 10px 89px;
-    margin-left: -0.3em; /*per far si che sia attaccato all'input*/
+    margin-left: -0.3em;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -162,209 +160,108 @@ ul.filtri a:hover, ul.itemlist a:hover
 main
 {
     position: relative;
-    width: 69em;
+    width: 75em;
     margin: auto;
 }
 
-section.contenuto_in_evidenza
-{
-    margin-top: 3.4em;
-    padding-right: 5.3em;
-}
-
-section.contenuto_in_evidenza_utenti
-{
-    margin-top: 3.4em;
-    float: left;
-    width: 50em;
-}
-
-h2
-{
-    font-size: 1.8em;
-}
-
-/*formattazione aside con link alle varie funzioni*/
-aside
+/*formattazione elemento in evidenza*/
+img.immagine_in_evidenza
 {
     float: left;
-    border: 2px solid #8711E3;
-    background-color: #D9D9D9;
-    padding: 1em 2em;
-    margin-right: 3.4em;
-}
-
-.utente
-{
-    margin-top: 3.4em;
-}
-
-aside ul
-{
-    margin-bottom: 0.5em;
-}
-
-p.aside
-{
-    font-family: 'Outfit', 'arial', sans-serif;
-    font-weight: 600;
-    margin-bottom: 0.4em;
-    padding-left: 0.3em;
-    border-left: 3px solid #5C1098;
-    text-transform: uppercase;
-    color: #2f2f2f;
-}
-
-a.linkAside {
-    text-decoration: none;
-    font-weight: 600;
-    color: #8711E3;
-}
-
-a.linkAside:hover
-{
-    color: #5C1098;
-}
-
-/*formattazione dei banner*/
-#box_main
-{
-    width: 45em;
-    height: 17.5em;
-    background-image: linear-gradient(to bottom, #8711E3 0%, #C37ACD 100%);
-    text-align: left;
-    margin: 2.4em 0 1.4em 0;
-    border-radius: 10px;
-    box-shadow: 0 6px 7px #7a7979;
-}
-
-div.contenitore_box_main
-{
-    padding: 4.5em 0 3.5em 3.5em;
-}
-
-form.form_box_main
-{
-    display: block;
-}
-
-h2.box_main
-{
-    color: #FFFFFF;
-    padding: 0 0 0.4em 0;
-}
-
-span.form_box_main
-{
-    display: flex;
-}
-
-label.label_box_main
-{
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-input.form_box_main
-{
-    float: left;
-    margin: 0.4em 4.1em 0 0;
-    padding: 12px 70px 10px 12px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-}
-
-button.cerca_box_main
-{
-    margin-top: 1.3em;
-    padding: 10px 30px;
-    background-color: #5C1098;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button.cerca_box_main:active
-{
-    background-color: #420c6c;
-    color: #D9D9D9;
-}
-
-/*formattazione della lista di biblioteche*/
-div.biblioteche, div.utenti
-{
-    float: right;
-    width: 22em;
-    height: 9.5em;
-    background-color: #D9D9D9;
-    margin-right: 0.55em;
-    margin-bottom: 1.7em;
-    padding: 1em;
-    box-sizing: border-box; /*per render il bordo parte dell'div*/
-    border: 3px solid #8711E3;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-}
-
-div.utenti
-{
-    float: left;
-}
-
-div.utenti p.dati
-{
-    margin-bottom: 0.2em;
-}
-
-div.biblioteche:hover, div.utenti:hover
-{
-    box-shadow: -2px 5px  7px #7a7979, 2px 0  7px #7a7979;
+    width: 9.5em;
+    height: 14em;
+    margin-right: 2em;
+    margin-bottom: 2em
 }
 
 p.titolo
 {
     font-family: 'Outfit', sans-serif;
-    font-size:1.1em;
-    font-weight: 800;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 2.2em;
+    margin-bottom: 0.8em;
     color: #8711E3;
-    padding: 0 0 0.45em 0;
 }
 
-p.dati
+p.descrizione_elemento
 {
     font-size: 0.9em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 22em;
-    color: #000000;
 }
 
-span.bold
+span.sottotitolo
 {
     font-weight: bold;
 }
 
-/*formattazione segui evento*/
-button.segui
+/*formattazione dettagli copie*/
+section.elementi_in_evidenza div
 {
-    position: absolute;
-    bottom: 2%;
-    right: 2%;
+    background-color: #8711E3;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+h3
+{
+    font-family: 'Outfit', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.4em;
+    padding: 0.5em;
+}
+
+p.messaggio
+{
+    margin-left: 0.65em;
+}
+
+table
+{
+    margin-top: 2em;;
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 2px solid #8711E3;
+    border-bottom: 2px solid #8711E3;
+}
+
+th
+{
+    border-bottom: 3px solid #c9c9c9;
+    padding: 0.4em 0.45em;
+}
+
+td
+{
+    border-top: 1px solid #c9c9c9;
+    padding: 0.4em 0.45em;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button.button_richiedi
+{
+    padding: 0.3em 0.4em;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #8711E3;
     border: none;
-    background-color: transparent;
+    border-radius: 0.3em;
 }
 
-img.cuore
+button.button_richiedi:hover
 {
-    width:1.5em;
-    height: 1.5em;
+    cursor: pointer;
+}
+
+button.button_richiedi:active
+{
+    background-color: #5C1098;
+    color: #edecec;
 }
 
 
-/*fomattazione del bottone per tornare all'inzio della pagina*/
+/*formattazione del pulsante per tornare ad inizio pagina*/
 .torna_su
 {
     display: inline-block;
@@ -440,3 +337,5 @@ nav.footer-nav li
     clear: both;
     visibility: hidden;
 }
+
+

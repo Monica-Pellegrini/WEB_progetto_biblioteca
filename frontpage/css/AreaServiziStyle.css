@@ -162,7 +162,7 @@ ul.filtri a:hover, ul.itemlist a:hover
 main
 {
     position: relative;
-    width: 75em;
+    width: 69em;
     margin: auto;
 }
 
@@ -283,10 +283,15 @@ span.form_iscrizione
     margin: 0.5em 0.5em 1.5em 0.5em;
 }
 
-label.label_iscrizione
+label.label_iscrizione, label.label_iscrizione_check
 {
     color: #000000;
     font-weight: bold;
+}
+
+label.label_iscrizione_check
+{
+    margin-right: 2.5em;
 }
 
 input.form_iscrizione
@@ -339,6 +344,19 @@ input.checkbox_box_main
     /**/
     margin: 0 0.3em 1.5em 0.5em;
     vertical-align: top; /*per allineare la checkbox con l'etteichetta che, essendo bold non era più allineata*/
+}
+
+#data_fine
+{
+    padding-top:0.2em;
+}
+
+textarea.form_iscrizione
+{
+    width: 53.5em;
+    height: 11em;
+    border: 1px solid #000000;
+    border-radius: 5px;
 }
 
 button.cerca_box_main
